@@ -1,0 +1,10 @@
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: dist/website2/index.html
+  upload: dist/website2/index.html
+
+- url: /
+  static_dir: dist/website2

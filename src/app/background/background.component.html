@@ -1,0 +1,72 @@
+<div class = "container-flud"   [ngStyle] = "{'background-color':customcolor}" id = "wholebackground" (mousemove)="mouseMoved($event)" (click)="onClick()">
+    <div class = "row" style="height: 100%">
+        <!-- <div class = "col" style="height: 100%">
+            Test1
+        </div>
+        <div class = "col">
+            Test2
+        </div>
+        <div class = "col">
+            <app-main></app-main>
+        </div> -->
+        <div class = "main" style = "text-align: center;">
+        
+        <app-main></app-main>
+        </div>
+        <div class = "score">
+            <div class = "row">
+               
+                <div class = "col">
+                <i [hidden]= "!life1" class= "far fa-heart fa-5x" style="color: white; text-align: left;"></i>
+                <i [hidden]= "!life2"class= "far fa-heart fa-5x" style="color: white; text-align: left;"></i>
+                <i [hidden]= "!life3" class= "far fa-heart fa-5x" style = "color: white;text-align: left;"></i>
+            </div>
+                <div class = "col">
+                    <!-- <p id='gameover' style="color: white; text-align: center; font-size: 100px; visibility: hidden; user-select: none;"></p> -->
+                    <br>   <br>   <br>   <br> <br>   <br>   <br>   <br> <br>   <br>   <br>   <br> <br>   <br>   <br>   <br> <br>   <br>   <br>   <br>
+                    <br>   <br>   <br>   <br><br>   <br>   <br>   <br>
+                    <button id = 'playagain' style="visibility: hidden; display: block; margin:auto; font-size: 100px;" class = "btn btn-light" [ngStyle] = "{'color':customcolor}" (click)="onClickPlayAgain()">Play again?</button>
+                  
+                    
+                </div>
+                <div class = "col">
+                    <p style="text-align: right; font-size: 50px; color:white">Score : {{score}}</p>
+                    <br>   <br>   <br>   <br> <br>   <br>   <br>   <br> <br>   <br>   <br>   <br> <br>   <br>   <br>   <br> <br>   <br>   <br>   <br>
+                    <br>   <br>   <br>   <br><br>   <br>   <br>   <br>
+                    <div style="text-align: right;">
+                    <i [hidden]="!gameover" style="color:white" class="fas fa-long-arrow-alt-down fa-7x"></i> 
+                    <i [hidden] = "!gameover" style="color:white" class="fas fa-long-arrow-alt-down fa-7x"></i>
+                    <i [hidden] = "!gameover" style="color:white" class="fas fa-long-arrow-alt-down fa-7x"></i>
+                </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+<div class = "row" (mousemove)="mouseMoved($event)" (click) = "onClick()">
+    <div class = "contact">
+        
+        <div class = "contact-text">
+           <a [ngStyle] = "{'color': customcolor}"style="font-family: 'Montserrat', sans-serif; font-size: 75px; background: black; border: none;" (click)="goTo('./assets/Resume_2021_Albert_Lu.pdf')">Resume</a> 
+           <br>
+           <button  [ngStyle] = "{'color': customcolor}"style="font-family: 'Montserrat', sans-serif; font-size: 75px; background: black; border: none;" (click)="goTo('https://github.com/azlu20')">Github</button> 
+           <br>
+           <button  [ngStyle] = "{'color': customcolor}"style="font-family: 'Montserrat', sans-serif; font-size: 75px; background: black; border: none;" (click)="goTo('https://www.linkedin.com/in/albert-lu-20/')">Linkedin</button>
+           <br>
+           <button  [ngStyle] = "{'color': customcolor}"style="font-family: 'Montserrat', sans-serif; font-size: 75px; background: black; border: none;" (click)="goTo('https://azlu20.github.io/')">Legacy</button> 
+        </div>
+    </div>
+</div>
+<div class = "animation" id = "animation" [ngStyle]="{'left': displayX, 'top':displayY, 'opacity':opaq}">
+    <i class="fas fa-fingerprint fa-9x"></i>
+</div>
+<div class = "popup" id = "popup" [ngStyle]="{'left': displayX2, 'top':displayY2}">
+    <button class = "btn btn-light" [ngStyle] = "{'color':customcolor}" (click) = "onClickPopup()" style="font-size: 20px;">Click me!</button>
+</div>
+<div class = "plusone" id = "plusone" [ngStyle]="{'left': displayX2, 'top':displayY2}">
+    <p style="font-size: 25px;">+1</p> 
+</div>
+<div class = "minusone" id = "minusone" [ngStyle]="{'left': displayX2, 'top':displayY3}">
+  <div class = "row"><p style="font-size: 25px;"></p> <i class= "far fa-heart fa-3x" style="color: white;">-</i> </div> 
+</div>

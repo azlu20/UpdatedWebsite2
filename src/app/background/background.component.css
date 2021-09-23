@@ -1,0 +1,65 @@
+#wholebackground{
+    min-height: 100%;
+    height:100%;
+    z-index: 50 !important;
+    position: relative;
+}
+.main{
+    height:100%;
+    min-height :100%;
+    margin-top: 15%;
+    margin-bottom: 25%;
+    z-index: 55 !important;
+}
+.contact{
+    background: black;
+    position: relative;
+    z-index: 1 !important;
+    height: 32em;
+    margin-bottom: -50%;
+    }
+    .contact-text{
+        
+    color: white;
+    position: fixed;
+    height: 40%;
+    bottom: 9%;
+    z-index: 0 !important;
+    left: 43%;
+    }
+    .animation{
+        visibility: hidden;
+        z-index: 100;
+        color: white;
+        position: absolute;
+
+    }
+    .popup{
+        visibility: visible;
+        z-index: 99;
+        color: white;
+        position: absolute;
+        user-select: none;
+    }
+    .score{
+        position: absolute;
+
+        z-index: 95;
+
+    }
+    .plusone{
+        visibility: hidden;
+        z-index: 110;
+        color: white;
+        position: absolute;
+        user-select: none;
+
+    }
+    .minusone{
+        visibility: hidden;
+        z-index: 110;
+        color: white;
+        position: absolute;
+        user-select: none;
+
+    }
